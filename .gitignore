@@ -1,0 +1,18 @@
+# colcon/ROS2
+build/
+install/
+log/
+.colcon/
+# Python
+**/__pycache__/
+*.py[cod]
+*.pyo
+# editors
+.vscode/
+.idea/
+# OS
+.DS_Store
+# ROS2 bags & DB (원하면)
+*.db3
+*.bag
+*.bag.active
