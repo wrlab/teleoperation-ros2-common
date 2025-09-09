@@ -4,7 +4,7 @@
   <name>wxr_ros2_common_py</name>
   <version>0.0.0</version>
   <description>Common Python utils for WXR ROS2</description>
-  <maintainer email="jaehong.yoo@wrl.onl">jaeyoo</maintainer>
+  <maintainer email="galy960610@gmail.com">Jaehong Yoo</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>

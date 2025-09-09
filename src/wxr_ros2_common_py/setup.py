@@ -13,7 +13,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='jaeyoo',
+    maintainer='Jaehong Yoo',
     maintainer_email='galy960610@gmail.com',
     description='Common Python utils for WXR ROS2',
     license='Apache-2.0',
