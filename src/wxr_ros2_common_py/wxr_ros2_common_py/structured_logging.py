@@ -8,12 +8,29 @@ def _format_params(params: Dict[str, Any]) -> str:
 def log_startup(node, params: Dict[str, Any], endpoints: Iterable[Dict[str, Any]]):
     """Print startup logs: params and endpoints with QoS details.
     endpoints: [{ 'dir': 'sub'|'pub', 'topic': str, 'type': str, 'qos': QoSProfile }]
+    endpoints: [{ 'dir': 'service'|'client', 'service': str, 'type': str, 'qos': QoSProfile }]
+
     """
     node.get_logger().info(f"[Param]: {_format_params(params)}")
     for ep in endpoints:
         direction = ep.get('dir', '').lower()
-        tag = '[Sub]' if direction == 'sub' else '[Pub]'
-        topic = ep.get('topic', '')
+
+        if direction == 'sub':
+            tag = '[Sub]'
+            topic = ep.get('topic', '')
+        elif direction == 'pub':
+            tag = '[Pub]'
+            topic = ep.get('topic', '')
+        elif direction == 'server':
+            tag = '[Service-Server]'
+            topic = ep.get('service', '')
+        elif direction == 'client':
+            tag = '[Service-Client]'
+            topic = ep.get('service', '')
+
+        #tag = '[Sub]' if direction == 'sub' else '[Pub]'
+        #topic = ep.get('topic', '')
+
         mtype = ep.get('type', '')
         qos = ep.get('qos', None)
         from .qos_utils import qos_to_multiline

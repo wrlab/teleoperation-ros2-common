@@ -4,7 +4,6 @@ from .qos_utils import qos_to_multiline
 from .units import rad_to_deg, deg_to_rad, list_rad_to_deg, list_deg_to_rad
 from .time_utils import now_sec_nsec, now_sec_of_day, stamp_to_float
 from .param_utils import get_bool_param, get_enum_param
-from .node_base import WXRNode
 
 __all__ = [
     "log_startup",
@@ -20,7 +19,6 @@ __all__ = [
     "stamp_to_float",
     "get_bool_param",
     "get_enum_param",
-    "WXRNode",
 ]
 
 
