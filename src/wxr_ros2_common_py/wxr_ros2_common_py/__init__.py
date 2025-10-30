@@ -1,3 +1,5 @@
+"""Convenience exports for the ROS 2 Python helpers used across projects."""
+
 from .structured_logging import log_startup, log_latency
 from .activity_tracker import ActivityTracker
 from .qos_utils import qos_to_multiline
